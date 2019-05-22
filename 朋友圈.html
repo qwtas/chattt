@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,
+    minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>朋友圈</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #weichat{
+            width: 375px;
+            height: 655px;
+        }
+        #weichat #top{
+            width: 375px;
+            height: 25px;
+            line-height: 25px;
+        }
+        #weichat #top .test1{
+            float: left;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        #weichat #top .test2{
+            float: right;
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+        #weichat #title{
+            width: 375px;
+            height: 640px;
+            background: white ;
+            overflow: scroll;
+        }
+        #weichat #title .test3 img{
+            position: absolute;
+            top: 30px;
+            left: 10px;
+        }
+        #weichat #title #bg img{
+            width: 370px;
+            height: 300px;
+            opacity: 0.6;
+        }
+        #weichat #title #tou img{
+            width: 90px;
+            height: 90px;
+            position: relative;
+            top: -60px;
+            left: 275px;
+            opacity: 0.8;
+        }
+        #weichat #title #name{
+            font-size: 25px;
+            font-family: 仿宋;
+            font-weight: 700;
+            position: relative;
+            top: -130px;
+            left: 160px;
+            color: white;
+        }
+        #weichat #title .text{
+            width: 360px;
+            height:400px;
+            background:white;
+            position: relative;
+            top: -90px;
+
+        }
+        #weichat #title .text img{
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            float: left;
+        }
+        #weichat #title .text .name{
+            font-size: 20px;
+            font-family: 仿宋;
+            font-weight: 700;
+            float: left;
+            margin-top: 20px;
+        }
+        #weichat #title .text .text1{
+            position: relative;
+            top: 50px;
+            left: -20px;
+            font-family: 仿宋;
+            font-weight: 700;
+        }
+        #weichat #title .text .text2 img{
+            width: 300px;
+            height: 250px;
+            position: relative;
+            left: 50px;
+        }
+        #weichat #title .text .zan img{
+            position: relative;
+            left: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="weichat">
+    <div id="top">
+    <span class="test1"><img src="img/4G-Network.png" alt=""></span>
+    <span class="test1"><img src="img/wifi.png" alt=""></span>
+    <span class="test2" id="time">
+                <script>
+                    setInterval("fun(time)",1);//按照指定的周期来调用函数或计算表达式
+                    function fun(timeID){//创建函数
+                        var date=new Date();//创建对象
+                        var h=date.getHours();
+                        var min=date.getMinutes();
+
+                        if (h<10){
+                            h="0"+h;
+                        }
+                        if (min<10){
+                            min="0"+min;
+                        }
+
+                        document.getElementById(timeID.id).innerHTML=h+":"+min
+                    }
+                </script>
+            </span>
+    <span class="test2"><img src="img/电池.png" alt=""></span>
+    <span class="test2"><img src="img/响铃.png" alt=""></span>
+    <span class="test2"><img src="img/闹钟.png" alt=""></span>
+</div>
+    <div id="title">
+        <a href="发现.html"><span class="test3"><img src="img/返%20回.png" alt=""></span></a>
+        <div id="bg"><img src="img/ig_meitu_1.jpg" alt=""></div>
+        <div id="tou"><img src="img/搞笑.jpg" alt=""></div>
+        <div id="name">悲喜自渡</div>
+        <div class="text">
+            <div><img src="img/叶子.jpg" alt=""></div>
+            <div class="name">叶</div>
+            <div class="text1">捧杯吧！IG！</div>
+            <div class="text2"><img src="img/捧杯吧_meitu_2.jpg" alt=""></div>
+            <div class="zan"><img src="img/省略.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
